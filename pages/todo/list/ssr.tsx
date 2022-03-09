@@ -1,6 +1,7 @@
 import { GetServerSideProps, NextPage } from 'next/types'
 import React from 'react'
 
+import TodoList from '../../../src/components/TodoList'
 import api, { Todo } from '../../api'
 
 interface Props {
@@ -11,11 +12,8 @@ const SSRTodoList: NextPage<Props> = ({ todos }) => {
   return (
     <>
       <h3>Server Side Rendering</h3>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+
+      <TodoList todos={todos} />
     </>
   )
 }

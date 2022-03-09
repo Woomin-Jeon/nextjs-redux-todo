@@ -1,6 +1,7 @@
 import { NextPage } from 'next/types'
 import React, { useEffect, useState } from 'react'
 
+import TodoList from '../../../src/components/TodoList'
 import api, { Todo } from '../../api'
 
 const CSRTodoList: NextPage = () => {
@@ -24,11 +25,8 @@ const CSRTodoList: NextPage = () => {
   return (
     <>
       <h3>Client Side Rendering</h3>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+
+      <TodoList todos={todos} />
     </>
   )
 }

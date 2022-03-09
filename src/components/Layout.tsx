@@ -6,7 +6,7 @@ const Layout: React.FC = ({ children }) => {
   const router = useRouter()
 
   const handleClickBackToHome = () => {
-    router.back()
+    router.push('/')
   }
 
   return (

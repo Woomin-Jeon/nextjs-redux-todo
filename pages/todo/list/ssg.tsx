@@ -1,6 +1,7 @@
 import { GetStaticProps, NextPage } from 'next/types'
 import React from 'react'
 
+import TodoList from '../../../src/components/TodoList'
 import api, { Todo } from '../../api'
 
 interface Props {
@@ -13,11 +14,8 @@ const SSGTodoList: NextPage<Props> = ({ requestId, todos }) => {
     <>
       <h3>Static Site Generation</h3>
       <h4>Request ID: {requestId}</h4>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
-        ))}
-      </ul>
+
+      <TodoList todos={todos} />
     </>
   )
 }
