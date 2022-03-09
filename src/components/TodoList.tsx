@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 
-import { Todo } from '../../pages/api'
+import { Todo } from '../../DB'
 
 interface Props {
   todos: Todo[]

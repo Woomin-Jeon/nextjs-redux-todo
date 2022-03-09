@@ -1,8 +1,9 @@
 import { GetServerSideProps, NextPage } from 'next/types'
 import React from 'react'
 
+import { Todo } from '../../../DB'
+import api from '../../../src/api'
 import TodoList from '../../../src/components/TodoList'
-import api, { Todo } from '../../api'
 
 interface Props {
   todos: Todo[]
