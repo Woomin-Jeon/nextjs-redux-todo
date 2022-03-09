@@ -5,8 +5,8 @@ const Home: NextPage = () => {
   return (
     <ul>
       <li>
-        <Link href="/todo/ssg" passHref>
-          <button style={{ padding: '8px 16px' }}>SSG TodoList {'>'}</button>
+        <Link href="/todo/csr" passHref>
+          <button style={{ padding: '8px 16px' }}>CSR TodoList {'>'}</button>
         </Link>
       </li>
       <li>
@@ -15,8 +15,13 @@ const Home: NextPage = () => {
         </Link>
       </li>
       <li>
-        <Link href="/todo/csr" passHref>
-          <button style={{ padding: '8px 16px' }}>CSR TodoList {'>'}</button>
+        <Link href="/todo/ssg" passHref>
+          <button style={{ padding: '8px 16px' }}>SSG TodoList {'>'}</button>
+        </Link>
+      </li>
+      <li>
+        <Link href="/todo/ssg_revalidate" passHref>
+          <button style={{ padding: '8px 16px' }}>SSG TodoList - revalidate {'>'}</button>
         </Link>
       </li>
     </ul>
