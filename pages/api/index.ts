@@ -4,15 +4,22 @@ type UnpackArray<T> = T extends (infer E)[] ? E : never
 
 export type Todo = UnpackArray<typeof TODOS>
 
+interface GetTodosResponse {
+  requestId: number
+  todos: Todo[]
+}
+
 const api = {
   getTodos() {
-    return new Promise<typeof TODOS>((resolve, reject) => {
+    return new Promise<GetTodosResponse>((resolve, reject) => {
       setTimeout(() => {
-        if (Math.random() > 0.8) {
+        const requestId = Math.round(Math.random() * 1000)
+
+        if (requestId > 800) {
           reject(new Error('API Error'))
         }
 
-        resolve(TODOS)
+        resolve({ requestId, todos: TODOS })
       }, 1000)
     })
   },

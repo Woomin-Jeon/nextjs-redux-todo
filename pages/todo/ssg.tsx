@@ -21,7 +21,7 @@ const SSGTodoList: React.FC<Props> = ({ todos }) => {
 }
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const todos = await api.getTodos()
+  const { todos } = await api.getTodos()
 
   return {
     props: {

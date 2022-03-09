@@ -6,7 +6,7 @@ const CSRTodoList: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([])
 
   useEffect(() => {
-    api.getTodos().then((todos) => {
+    api.getTodos().then(({ todos }) => {
       setTodos((prev) => [...prev, ...todos])
     })
   }, [])

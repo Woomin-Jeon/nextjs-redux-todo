@@ -21,7 +21,7 @@ const SSRTodoList: React.FC<Props> = ({ todos }) => {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
-  const todos = await api.getTodos()
+  const { todos } = await api.getTodos()
 
   return {
     props: {
