@@ -15,3 +15,19 @@ export const TODOS = [
     done: false,
   },
 ]
+
+type UnpackArray<T> = T extends (infer E)[] ? E : never
+
+export type Todo = UnpackArray<typeof TODOS>
+
+const DB = {
+  getTodos() {
+    return new Promise<Todo[]>((resolve) => {
+      setTimeout(() => {
+        resolve(TODOS)
+      }, 1000)
+    })
+  },
+}
+
+export default DB
