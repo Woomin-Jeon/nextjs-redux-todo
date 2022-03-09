@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import api, { Todo } from '../api'
+import api, { Todo } from '../../api'
 
 const CSRTodoList: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([])

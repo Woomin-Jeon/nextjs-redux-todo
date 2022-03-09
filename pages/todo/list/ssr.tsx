@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next/types'
 import React from 'react'
 
-import api, { Todo } from '../api'
+import api, { Todo } from '../../api'
 
 interface Props {
   todos: Todo[]
