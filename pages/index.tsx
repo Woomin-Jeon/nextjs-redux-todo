@@ -1,15 +1,12 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
     <div>
-      <Head>
-        <title>NextJS-Redux Todo App</title>
-        <meta name="description" content="nextjs redux todo app" />
-      </Head>
-
-      <h1>NextJS-Redux Todo App</h1>
+      <Link href="/todo" passHref>
+        <button style={{ padding: '8px 16px' }}>Start Todo {'>'}</button>
+      </Link>
     </div>
   )
 }
