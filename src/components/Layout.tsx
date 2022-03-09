@@ -4,7 +4,6 @@ import React from 'react'
 
 const Layout: React.FC = ({ children }) => {
   const router = useRouter()
-  console.log(router.query)
 
   const handleClickBackToHome = () => {
     router.back()
