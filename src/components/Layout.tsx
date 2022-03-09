@@ -1,7 +1,14 @@
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const Layout: React.FC = ({ children }) => {
+  const router = useRouter()
+
+  const handleClickBackToHome = () => {
+    router.back()
+  }
+
   return (
     <>
       <Head>
@@ -17,7 +24,9 @@ const Layout: React.FC = ({ children }) => {
         {children}
 
         <footer style={FooterLayoutStyle}>
-          <button style={BackButtonStyle}>{'<'} Back to home</button>
+          <button onClick={handleClickBackToHome} style={BackButtonStyle}>
+            {'<'} Back to home
+          </button>
         </footer>
       </main>
     </>
