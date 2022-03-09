@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next/types'
+import { GetStaticProps, NextPage } from 'next/types'
 import React from 'react'
 
 import api, { Todo } from '../../api'
@@ -8,7 +8,7 @@ interface Props {
   todos: Todo[]
 }
 
-const SSGTodoList: React.FC<Props> = ({ requestId, todos }) => {
+const SSGTodoList: NextPage<Props> = ({ requestId, todos }) => {
   return (
     <>
       <h3>Static Site Generation - revalidate 10 sec</h3>

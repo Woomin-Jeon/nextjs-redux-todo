@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next/types'
+import { GetServerSideProps, NextPage } from 'next/types'
 import React from 'react'
 
 import api, { Todo } from '../../api'
@@ -7,7 +7,7 @@ interface Props {
   todos: Todo[]
 }
 
-const SSRTodoList: React.FC<Props> = ({ todos }) => {
+const SSRTodoList: NextPage<Props> = ({ todos }) => {
   return (
     <>
       <h3>Server Side Rendering</h3>

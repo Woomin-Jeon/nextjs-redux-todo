@@ -1,8 +1,9 @@
+import { NextPage } from 'next/types'
 import React, { useEffect, useState } from 'react'
 
 import api, { Todo } from '../../api'
 
-const CSRTodoList: React.FC = () => {
+const CSRTodoList: NextPage = () => {
   const [todos, setTodos] = useState<Todo[]>([])
 
   useEffect(() => {
